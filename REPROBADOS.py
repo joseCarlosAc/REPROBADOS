@@ -2,6 +2,12 @@
 import turtle
 import random
 import time
+import os
+
+# ruta para imagenes
+directorio_script = os.path.dirname(__file__)
+
+
 #ventana
 wn = turtle.Screen()
 wn.title("REPROBADOS")
@@ -724,7 +730,7 @@ def tiempoje(x):
 #introduccion(intro)
 def pantalla_inicio():
 
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pen.goto(-390,-20)
     pen.write(f"        Hola {nombre} deja te recuerdo lo que está pasando.\n\n"
@@ -739,7 +745,7 @@ def pantalla_inicio():
 #narra la historia de los vales(historia)
 def pantalla_2():
 
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pen.goto(-390,-20)
     pen.write(f"Pensando una manera para pasar recuerdas la leyenda de los vales\n"
@@ -752,7 +758,7 @@ def pantalla_2():
 
 #el primer acertijo(a1)
 def acertijo1():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -764,11 +770,11 @@ def acertijo1():
 
 #el mapa completo
 def mapa():
-    wn.bgpic("mapa1.gif")
+    wn.bgpic(os.path.join(directorio_script, "mapa1.gif"))
 
 #tutorial
 def tutorial():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pen.goto(-390,-20)
     pen.write(f"Utiliza las flechas para desplazarte y acércate a los objetos\n"
@@ -779,7 +785,7 @@ def tutorial():
 
 #cancha con 0 vales
 def cancha0():
-    wn.bgpic("cancha con arbol.gif")
+    wn.bgpic(os.path.join(directorio_script, "cancha con arbol.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -795,7 +801,7 @@ def cancha0():
 
 #arbol con 0 vales
 def arbol0():
-    wn.bgpic("hueco1.gif")
+    wn.bgpic(os.path.join(directorio_script, "hueco1.gif"))
     if moneda==0:
         inventari.write(f"Presiona 1 para regrsar a la cancha\n"
                     f"Presiona 2 para ver el acertijo\n"
@@ -809,7 +815,7 @@ def arbol0():
 
 #biblioteca con 0 vales
 def biblio0():
-    wn.bgpic("biblioteca1.gif")
+    wn.bgpic(os.path.join(directorio_script, "biblioteca1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -818,7 +824,7 @@ def biblio0():
 
 #fuente con 0 vales
 def fuente0():
-    wn.bgpic("fuente0.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente0.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -895,7 +901,7 @@ def dialogo05():
 
 #auditorio con 0 vales
 def auditorio0():
-    wn.bgpic("auditorio1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorio1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -905,7 +911,7 @@ def auditorio0():
 
 #auditorio por dentro con 0 vales
 def auditorio_den0():
-    wn.bgpic("auditorioDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -923,7 +929,7 @@ def auditorio_den0():
 
 #cafeteria con 0 vales
 def cafeteria0():
-    wn.bgpic("cafeteria1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteria1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -933,7 +939,7 @@ def cafeteria0():
 
 #cafeteria por dentro con 0 vales
 def cafeteria_den0():
-    wn.bgpic("cafeteriaDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteriaDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -951,7 +957,7 @@ def cafeteria_den0():
 
 #vale dorado
 def vale():
-    wn.bgpic("valedorado1.gif")
+    wn.bgpic(os.path.join(directorio_script, "valedorado1.gif"))
     pasar.goto(0,-140)
     pasar.color("white")
     pasar.penup()
@@ -960,7 +966,7 @@ def vale():
 
 #caja
 def caja():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -970,7 +976,7 @@ def caja():
 
 #moneda
 def moneda_n():
-    wn.bgpic("moneda1.gif")
+    wn.bgpic(os.path.join(directorio_script, "moneda1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -980,7 +986,7 @@ def moneda_n():
 
 #el segundo acertijo(a2)
 def acertijo2():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -991,7 +997,7 @@ def acertijo2():
 
 #cancha con 1 vales
 def cancha1():
-    wn.bgpic("cancha con arbol.gif")
+    wn.bgpic(os.path.join(directorio_script, "cancha con arbol.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1008,7 +1014,7 @@ def cancha1():
 
 #arbol con 1 vales
 def arbol1():
-    wn.bgpic("hueco1.gif")
+    wn.bgpic(os.path.join(directorio_script, "hueco1.gif"))
     inventari.goto(xinventario_d,yinventario)
     if moneda==0:
         inventari.write(f"Presiona 1 para regrsar a la cancha\n"
@@ -1023,7 +1029,7 @@ def arbol1():
 
 #biblioteca con 1 vales
 def biblio1():
-    wn.bgpic("biblioteca1.gif")
+    wn.bgpic(os.path.join(directorio_script, "biblioteca1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1034,7 +1040,7 @@ def biblio1():
 
 #fuente con 1 vales
 def fuente1():
-    wn.bgpic("fuente0.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente0.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1104,7 +1110,7 @@ def dialogo15():
 
 #auditorio con 1 vales
 def auditorio1():
-    wn.bgpic("auditorio1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorio1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1115,7 +1121,7 @@ def auditorio1():
 
 #auditorio por dentro con 1 vales
 def auditorio_den1():
-    wn.bgpic("auditorioDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -1134,7 +1140,7 @@ def auditorio_den1():
 
 #cafeteria con 1 vales
 def cafeteria1():
-    wn.bgpic("cafeteria1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteria1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1145,7 +1151,7 @@ def cafeteria1():
 
 #cafeteria por dentro con 1 vales
 def cafeteria_den1():
-    wn.bgpic("cafeteriaDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteriaDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1164,7 +1170,7 @@ def cafeteria_den1():
 
 #ventana biblioteca
 def ventana():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -1175,7 +1181,7 @@ def ventana():
 
 #tutorial de polis
 def tutorial_polis():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -1227,7 +1233,7 @@ poli5.dx=3
 
 #cuadro del dire 1
 def cuadro_dire1():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-370,-20)
@@ -1237,7 +1243,7 @@ def cuadro_dire1():
 
 #cuadro del dire 2
 def cuadro_dire2():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -1249,7 +1255,7 @@ def cuadro_dire2():
 
 #el tercer acertijo(a3)
 def acertijo3():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -1260,7 +1266,7 @@ def acertijo3():
 
 #cancha con 2 vales
 def cancha2():
-    wn.bgpic("cancha con arbol.gif")
+    wn.bgpic(os.path.join(directorio_script, "cancha con arbol.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1277,7 +1283,7 @@ def cancha2():
 
 #biblioteca con 2 vales
 def biblio2():
-    wn.bgpic("biblioteca1.gif")
+    wn.bgpic(os.path.join(directorio_script, "biblioteca1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1287,7 +1293,7 @@ def biblio2():
 
 #fuente con 2 vales
 def fuente2():
-    wn.bgpic("fuente0.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente0.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1344,7 +1350,7 @@ def fuente2():
 
 #fuente som1
 def fuente2_1():
-    wn.bgpic("fuente1.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1401,7 +1407,7 @@ def fuente2_1():
 
 #fuente som2
 def fuente2_2():
-    wn.bgpic("fuente2.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente2.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1458,7 +1464,7 @@ def fuente2_2():
 
 #fuente som3
 def fuente2_3():
-    wn.bgpic("fuente3.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente3.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1515,7 +1521,7 @@ def fuente2_3():
 
 #fuente som4
 def fuente2_4():
-    wn.bgpic("fuente4.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente4.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1572,7 +1578,7 @@ def fuente2_4():
 
 #fuente som5
 def fuente2_5():
-    wn.bgpic("fuente5.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente5.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1629,7 +1635,7 @@ def fuente2_5():
 
 #fuente som6
 def fuente2_6():
-    wn.bgpic("fuente6.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente6.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1686,7 +1692,7 @@ def fuente2_6():
 
 #fuente som7
 def fuente2_7():
-    wn.bgpic("fuente7.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente7.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1743,7 +1749,7 @@ def fuente2_7():
 
 #fuente som8
 def fuente2_8():
-    wn.bgpic("fuente8.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente8.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1800,7 +1806,7 @@ def fuente2_8():
 
 #fuente som9
 def fuente2_9():
-    wn.bgpic("fuente9.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente9.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1857,7 +1863,7 @@ def fuente2_9():
 
 #fuente som10
 def fuente2_10():
-    wn.bgpic("fuente10.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente10.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1914,7 +1920,7 @@ def fuente2_10():
 
 #fuente som11
 def fuente2_11():
-    wn.bgpic("fuente11.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente11.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -1971,7 +1977,7 @@ def fuente2_11():
 
 #fuente som12
 def fuente2_12():
-    wn.bgpic("fuente12.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente12.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2028,7 +2034,7 @@ def fuente2_12():
 
 #ladrillo1
 def ladrillo1():
-    wn.bgpic("piedrasuelta1.gif")
+    wn.bgpic(os.path.join(directorio_script, "piedrasuelta1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2040,7 +2046,7 @@ def ladrillo1():
 
 #ladrillo2
 def ladrillo2():
-    wn.bgpic("piedrafloja2.gif")
+    wn.bgpic(os.path.join(directorio_script, "piedrafloja2.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2075,7 +2081,7 @@ def dialogo25():
 
 #auditorio con 2 vales
 def auditorio2():
-    wn.bgpic("auditorio1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorio1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2086,7 +2092,7 @@ def auditorio2():
 
 #auditorio por dentro con 2 vales
 def auditorio_den2():
-    wn.bgpic("auditorioDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -2105,7 +2111,7 @@ def auditorio_den2():
 
 #cafeteria con 2 vales
 def cafeteria2():
-    wn.bgpic("cafeteria1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteria1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2116,7 +2122,7 @@ def cafeteria2():
 
 #cafeteria por dentro con 2 vales
 def cafeteria_den2():
-    wn.bgpic("cafeteriaDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteriaDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2135,7 +2141,7 @@ def cafeteria_den2():
 
 #arbol con 2 vales
 def arbol2():
-    wn.bgpic("hueco1.gif")
+    wn.bgpic(os.path.join(directorio_script, "hueco1.gif"))
     if moneda==0:
         inventari.write(f"Presiona 1 para regrsar a la cancha\n"
                     f"Presiona 2 para ver el acertijo\n"
@@ -2149,7 +2155,7 @@ def arbol2():
 
 #hueco
 def hueco():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -2159,7 +2165,7 @@ def hueco():
 
 #el cuarto acertijo(a4)
 def acertijo4():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -2170,7 +2176,7 @@ def acertijo4():
 
 #cancha con 3 vales
 def cancha3():
-    wn.bgpic("cancha con arbol.gif")
+    wn.bgpic(os.path.join(directorio_script, "cancha con arbol.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2187,7 +2193,7 @@ def cancha3():
 
 #biblioteca con 3 vales
 def biblio3():
-    wn.bgpic("biblioteca1.gif")
+    wn.bgpic(os.path.join(directorio_script, "biblioteca1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2197,7 +2203,7 @@ def biblio3():
 
 #fuente con 3 vales
 def fuente3():
-    wn.bgpic("fuente0.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente0.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2268,7 +2274,7 @@ def dialogo35():
 
 #auditorio con 3 vales
 def auditorio3():
-    wn.bgpic("auditorio1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorio1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2279,7 +2285,7 @@ def auditorio3():
 
 #auditorio por dentro con 3 vales
 def auditorio_den3():
-    wn.bgpic("auditorioDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -2297,7 +2303,7 @@ def auditorio_den3():
     limites_auditorioden()
 
 def auditorio_den3_2():
-    wn.bgpic("auditorioDentro2.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro2.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -2316,7 +2322,7 @@ def auditorio_den3_2():
 
 #backstage
 def backstage():
-    wn.bgpic("backstage1.gif")
+    wn.bgpic(os.path.join(directorio_script, "backstage1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2327,7 +2333,7 @@ def backstage():
 
 #fondo del auditorio
 def fondo():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(120,yinventario)
@@ -2354,7 +2360,7 @@ def fondo():
 
 #pizarra1
 def pizarra1():
-    wn.bgpic("pizarra1.gif")
+    wn.bgpic(os.path.join(directorio_script, "pizarra1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2366,7 +2372,7 @@ def pizarra1():
 
 #pizarra2
 def pizarra2():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -2376,7 +2382,7 @@ def pizarra2():
 
 #cafeteria con 3 vales
 def cafeteria3():
-    wn.bgpic("cafeteria1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteria1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2387,7 +2393,7 @@ def cafeteria3():
 
 #cafeteria por dentro con 3 vales
 def cafeteria_den3():
-    wn.bgpic("cafeteriaDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteriaDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2406,7 +2412,7 @@ def cafeteria_den3():
 
 #arbol con 3 vales
 def arbol3():
-    wn.bgpic("hueco1.gif")
+    wn.bgpic(os.path.join(directorio_script, "hueco1.gif"))
     if moneda==0:
         inventari.write(f"Presiona 1 para regrsar a la cancha\n"
                     f"Presiona 2 para ver el acertijo\n"
@@ -2420,7 +2426,7 @@ def arbol3():
 
 #el cuarto acertijo(a5)
 def acertijo5():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -2431,7 +2437,7 @@ def acertijo5():
 
 #cancha con 4 vales
 def cancha4():
-    wn.bgpic("cancha con arbol.gif")
+    wn.bgpic(os.path.join(directorio_script, "cancha con arbol.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2448,7 +2454,7 @@ def cancha4():
 
 #biblioteca con 4 vales
 def biblio4():
-    wn.bgpic("biblioteca1.gif")
+    wn.bgpic(os.path.join(directorio_script, "biblioteca1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2458,7 +2464,7 @@ def biblio4():
 
 #fuente con 4 vales
 def fuente4():
-    wn.bgpic("fuente0.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente0.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2530,7 +2536,7 @@ def dialogo45():
 
 #auditorio con 4 vales
 def auditorio4():
-    wn.bgpic("auditorio1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorio1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2541,7 +2547,7 @@ def auditorio4():
 
 #auditorio por dentro con 4 vales
 def auditorio_den4():
-    wn.bgpic("auditorioDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -2560,7 +2566,7 @@ def auditorio_den4():
 
 #cafeteria con 4 vales
 def cafeteria4():
-    wn.bgpic("cafeteria1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteria1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2571,7 +2577,7 @@ def cafeteria4():
 
 #cafeteria por dentro con 4 vales
 def cafeteria_den4():
-    wn.bgpic("cafeteriaDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteriaDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2590,7 +2596,7 @@ def cafeteria_den4():
 
 #vendingmachine1
 def vendingmachine1():
-    wn.bgpic("vendingmachine1.gif")
+    wn.bgpic(os.path.join(directorio_script, "vendingmachine1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2602,7 +2608,7 @@ def vendingmachine1():
 
 #vendingmachine2
 def vendingmachine2():
-    wn.bgpic("vendingmachine2.gif")
+    wn.bgpic(os.path.join(directorio_script, "vendingmachine2.gif"))
     if moneda==0:
         inventari.write(f"Presiona 1 para salir\n"
                     f"Presiona 2 para ver el acertijo\n"
@@ -2616,7 +2622,7 @@ def vendingmachine2():
 
 #arbol con 4 vales
 def arbol4():
-    wn.bgpic("hueco1.gif")
+    wn.bgpic(os.path.join(directorio_script, "hueco1.gif"))
     if moneda==0:
         inventari.write(f"Presiona 1 para regrsar a la cancha\n"
                     f"Presiona 2 para ver el acertijo\n"
@@ -2630,7 +2636,7 @@ def arbol4():
 
 #entregar
 def entrega():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pas_espacio(pasar)
     pen.goto(-390,-20)
@@ -2641,7 +2647,7 @@ def entrega():
 
 #cancha con 5 vales
 def cancha5():
-    wn.bgpic("cancha con arbol.gif")
+    wn.bgpic(os.path.join(directorio_script, "cancha con arbol.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2658,7 +2664,7 @@ def cancha5():
 
 #biblioteca con 5 vales
 def biblio5():
-    wn.bgpic("biblioteca1.gif")
+    wn.bgpic(os.path.join(directorio_script, "biblioteca1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2668,7 +2674,7 @@ def biblio5():
 
 #fuente con 5 vales
 def fuente5():
-    wn.bgpic("fuente0.gif")
+    wn.bgpic(os.path.join(directorio_script, "fuente0.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2736,7 +2742,7 @@ def dialogo55():
 
 #auditorio con 5 vales
 def auditorio5():
-    wn.bgpic("auditorio1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorio1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2747,7 +2753,7 @@ def auditorio5():
 
 #auditorio por dentro con 5 vales
 def auditorio_den5():
-    wn.bgpic("auditorioDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "auditorioDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_i,yinventario)
@@ -2871,7 +2877,7 @@ def maestro5():
 
 #cafeteria con 5 vales
 def cafeteria5():
-    wn.bgpic("cafeteria1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteria1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2882,7 +2888,7 @@ def cafeteria5():
 
 #cafeteria por dentro con 5 vales
 def cafeteria_den5():
-    wn.bgpic("cafeteriaDentro1.gif")
+    wn.bgpic(os.path.join(directorio_script, "cafeteriaDentro1.gif"))
     texto(inventari)
     inventari.color("black")
     inventari.goto(xinventario_d,yinventario)
@@ -2901,7 +2907,7 @@ def cafeteria_den5():
 
 #arbol con 5 vales
 def arbol5():
-    wn.bgpic("hueco1.gif")
+    wn.bgpic(os.path.join(directorio_script, "hueco1.gif"))
     if moneda==0:
         inventari.write(f"Presiona 1 para regrsar a la cancha\n"
                     f"Presiona 2 para ver el acertijo\n"
@@ -2916,7 +2922,7 @@ def arbol5():
 #cierre
 def cierre():
 
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pen.goto(-390,-20)
     pen.write(f"                      Felicidades {nombre}\n\n"
@@ -2928,7 +2934,7 @@ def cierre():
 
 #fin
 def fin():
-    wn.bgpic("fondo negro.gif")
+    wn.bgpic(os.path.join(directorio_script, "fondo negro.gif"))
     texto(pen)
     pen.goto(-10,-80)
     pen.write(f"FIN",align="center",font=("Courier",100,"normal"))
@@ -9231,3 +9237,5 @@ while True:
     if t==0:
         tiempo+=1
         j+=1
+
+turtle.done()
